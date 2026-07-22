@@ -3,50 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barry Nguyen — Data & Marketing</title>
-<meta name="description" content="Barry Nguyen (Xuan Hoang Nguyen) — Applied Data Science + Business (Marketing) graduate. Data analyst, data scientist and marketing-analytics projects.">
+<title>Barry Nguyen — Data & Analytics</title>
+<meta name="description" content="Barry Nguyen (Xuan Hoang Nguyen) — Applied Data Science + Business (Marketing) graduate, Western Sydney University. Credit-risk modelling, BI dashboards, applied statistics, big data and scientific-sensor projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --maroon:#9B2D28; --maroon-2:#B23A34; --maroon-ink:#7A231F;
+  --maroon:#9B2D28; --maroon-2:#B23A34;
   --ink:#1A1A1A; --ink-2:#40454C; --ink-3:#6B7280;
-  --bg:#FBF9F7; --card:#FFFFFF; --line:#E7E3DE; --chip:#F2EEE9;
-  --maxw:1000px;
+  --bg:#FBF9F7; --card:#FFFFFF; --line:#E7E3DE; --chip:#F2EEE9; --maxw:1040px;
 }
 @media (prefers-color-scheme:dark){
-  :root{ --ink:#ECECEC; --ink-2:#C3C7CC; --ink-3:#9AA0A8;
-    --bg:#141312; --card:#1C1B1A; --line:#2E2C2A; --chip:#26241F;
-    --maroon:#E07A6E; --maroon-2:#EC8B7F; --maroon-ink:#E07A6E; }
+  :root{ --ink:#ECECEC; --ink-2:#C3C7CC; --ink-3:#9AA0A8; --bg:#141312; --card:#1C1B1A;
+    --line:#2E2C2A; --chip:#26241F; --maroon:#E07A6E; --maroon-2:#EC8B7F; }
 }
-:root[data-theme="light"]{ --ink:#1A1A1A;--ink-2:#40454C;--ink-3:#6B7280;--bg:#FBF9F7;--card:#FFFFFF;--line:#E7E3DE;--chip:#F2EEE9;--maroon:#9B2D28;--maroon-2:#B23A34;--maroon-ink:#7A231F; }
-:root[data-theme="dark"]{ --ink:#ECECEC;--ink-2:#C3C7CC;--ink-3:#9AA0A8;--bg:#141312;--card:#1C1B1A;--line:#2E2C2A;--chip:#26241F;--maroon:#E07A6E;--maroon-2:#EC8B7F;--maroon-ink:#E07A6E; }
+:root[data-theme="light"]{ --ink:#1A1A1A;--ink-2:#40454C;--ink-3:#6B7280;--bg:#FBF9F7;--card:#FFFFFF;--line:#E7E3DE;--chip:#F2EEE9;--maroon:#9B2D28;--maroon-2:#B23A34; }
+:root[data-theme="dark"]{ --ink:#ECECEC;--ink-2:#C3C7CC;--ink-3:#9AA0A8;--bg:#141312;--card:#1C1B1A;--line:#2E2C2A;--chip:#26241F;--maroon:#E07A6E;--maroon-2:#EC8B7F; }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
 
-/* nav */
 nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 nav .brand{font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:var(--maroon)}
-nav .links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:500}
+nav .links{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:500}
 nav .links a{color:var(--ink-2)}nav .links a:hover{color:var(--maroon)}
 #themeBtn{background:none;border:1px solid var(--line);color:var(--ink-2);width:34px;height:34px;border-radius:9px;cursor:pointer;font-size:15px}
 @media(max-width:640px){nav .links a:not(.btn-mini){display:none}}
 
-/* hero */
-.hero{padding:76px 0 54px}
+.hero{padding:74px 0 52px}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);display:flex;align-items:center;gap:12px;margin-bottom:22px}
 .eyebrow::before{content:"";width:30px;height:2px;background:var(--maroon)}
-.hero h1{font-size:clamp(38px,6.6vw,66px);color:var(--ink)}
+.hero h1{font-size:clamp(37px,6.4vw,64px);color:var(--ink)}
 .hero h1 .sub{color:var(--maroon)}
 .hero .roles{font-size:clamp(16px,2.3vw,21px);color:var(--ink-2);font-weight:500;margin-top:16px}
-.hero .lead{font-size:clamp(15px,1.7vw,17.5px);color:var(--ink-2);max-width:660px;margin-top:22px}
+.hero .lead{font-size:clamp(15px,1.7vw,17px);color:var(--ink-2);max-width:680px;margin-top:22px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:11px;font-weight:600;font-size:14.5px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:.15s}
 .btn:hover{transform:translateY(-1px);border-color:var(--maroon)}
@@ -55,48 +52,58 @@ nav .links a{color:var(--ink-2)}nav .links a:hover{color:var(--maroon)}
 .meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3)}
 .meta b{display:block;font-size:19px;font-weight:700;color:var(--ink);font-family:'Fraunces',serif}
 
-/* sections */
-section{padding:52px 0}
+section{padding:50px 0}
 .sec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);margin-bottom:10px}
 .sec-title{font-size:clamp(25px,3.4vw,34px);color:var(--ink);margin-bottom:8px}
-.sec-lead{color:var(--ink-2);max-width:640px;margin-bottom:34px}
+.sec-lead{color:var(--ink-2);max-width:660px;margin-bottom:32px}
+.note{font-size:13px;color:var(--ink-3);margin-bottom:30px;font-style:italic}
 
-/* projects */
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-@media(max-width:720px){.grid{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px;display:flex;flex-direction:column;transition:.18s}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.18s}
 .card:hover{transform:translateY(-3px);box-shadow:0 16px 40px -22px rgba(0,0,0,.35);border-color:color-mix(in srgb,var(--maroon) 40%,var(--line))}
-.card .kicker{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon)}
-.card h3{font-size:20px;margin:8px 0 0;color:var(--ink)}
-.card .result{font-size:15px;color:var(--ink);font-weight:600;margin:12px 0 6px;line-height:1.4}
-.card .desc{font-size:14px;color:var(--ink-2);flex:1}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 18px}
-.tag{font-size:12px;font-weight:500;color:var(--ink-2);background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
-.card .actions{display:flex;gap:16px;font-size:13.5px;font-weight:600}
+.thumb{position:relative;height:178px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:10px}
+.thumb img{max-height:100%;width:auto;object-fit:contain}
+.thumb.stat{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#fff;flex-direction:column;gap:2px}
+.thumb.stat .big{font-family:'Fraunces',serif;font-size:52px;font-weight:700;line-height:1}
+.thumb.stat .cap{font-size:13px;font-weight:600;letter-spacing:.02em;opacity:.92}
+.flag{position:absolute;top:12px;left:12px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--maroon);color:#fff;padding:4px 10px;border-radius:999px}
+.flag.live{background:#16A34A}
+.card .body{padding:22px 24px 20px;display:flex;flex-direction:column;flex:1}
+.card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--maroon)}
+.card h3{font-size:19.5px;margin:8px 0 0;color:var(--ink)}
+.card .result{font-size:14.5px;color:var(--ink);font-weight:600;margin:11px 0 6px;line-height:1.42}
+.card .desc{font-size:13.5px;color:var(--ink-2);flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0 4px}
+.tag{font-size:11.5px;font-weight:500;color:var(--ink-2);background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.card .actions{display:flex;gap:16px;font-size:13.5px;font-weight:600;margin-top:14px}
 .card .actions a{color:var(--maroon);display:inline-flex;align-items:center;gap:5px}
 .card .actions a:hover{text-decoration:underline}
 .card .actions .muted{color:var(--ink-3);font-weight:500}
 
-/* skills + about */
-.two{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
-@media(max-width:720px){.two{grid-template-columns:1fr;gap:30px}}
-.skillgroup{margin-bottom:18px}
+.more{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.morecard{flex:1;min-width:210px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.morecard .mt{font-weight:700;color:var(--ink);font-size:14.5px}
+.morecard .md{font-size:12.5px;color:var(--ink-3);margin:3px 0 9px}
+.morecard a{font-size:13px;font-weight:600;color:var(--maroon)}
+
+.two{display:grid;grid-template-columns:1.05fr 1fr;gap:40px}
+@media(max-width:760px){.two{grid-template-columns:1fr;gap:30px}}
+.skillgroup{margin-bottom:16px}
 .skillgroup .lbl{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:13px;color:var(--ink-2);background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:5px 12px}
-.about p{color:var(--ink-2);margin-bottom:14px}
+.chip{font-size:12.5px;color:var(--ink-2);background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:5px 11px}
+.about p{color:var(--ink-2);margin-bottom:14px;font-size:15px}
 .about .edu{border-left:3px solid var(--maroon);padding-left:16px;margin-top:8px}
 .about .edu b{color:var(--ink)}
-.badge{display:inline-block;font-size:12.5px;font-weight:600;color:var(--maroon);background:color-mix(in srgb,var(--maroon) 12%,transparent);border-radius:999px;padding:4px 13px;margin-top:6px}
+.badge{display:inline-block;font-size:12.5px;font-weight:600;color:var(--maroon);background:color-mix(in srgb,var(--maroon) 12%,transparent);border-radius:999px;padding:4px 13px;margin-top:14px}
 
-/* resume */
 .resume-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
 .rcard{flex:1;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
 .rcard .t{font-weight:700;color:var(--ink);font-size:15.5px;margin-bottom:4px}
 .rcard .d{font-size:13px;color:var(--ink-3);margin-bottom:14px}
 .rcard a{font-size:13.5px;font-weight:600;color:var(--maroon)}
 
-/* footer */
 footer{border-top:1px solid var(--line);padding:46px 0 60px;text-align:center}
 footer h2{font-size:clamp(24px,3.2vw,32px);color:var(--ink);margin-bottom:10px}
 footer p{color:var(--ink-2);margin-bottom:22px}
@@ -112,17 +119,17 @@ footer .fnote{margin-top:34px;font-size:12.5px;color:var(--ink-3)}
     <a href="#work">Work</a>
     <a href="#skills">Skills</a>
     <a href="#about">About</a>
-    <a href="#resume">Resume</a>
+    <a href="#resume">Résumé</a>
     <a class="btn-mini" href="#contact" style="color:var(--maroon);font-weight:600">Contact</a>
     <button id="themeBtn" title="Toggle theme" aria-label="Toggle light/dark">◐</button>
   </div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <div class="eyebrow">Data &amp; Marketing · Sydney</div>
+  <div class="eyebrow">Data &amp; Analytics · Sydney</div>
   <h1>Turning messy data<br>into <span class="sub">decisions.</span></h1>
   <div class="roles">Data Analyst · Data Scientist · Marketing Analytics</div>
-  <p class="lead">Western Sydney University double-degree graduate in <b>Applied Data Science</b> (GPA 6.0/7) and <b>Business – Marketing</b>. I build machine-learning models, BI dashboards, and data-driven campaigns — and I connect the numbers back to the business question behind them.</p>
+  <p class="lead">Western Sydney University double-degree graduate in <b>Applied Data Science</b> (GPA 6.0/7) and <b>Business – Marketing</b>. I build the analysis, the model and the dashboard — then explain what it means in plain business terms. The charts below are pulled directly from my submitted work, not mock-ups.</p>
   <div class="cta">
     <a class="btn primary" href="#work">View my work →</a>
     <a class="btn" href="#resume">Download résumé</a>
@@ -130,7 +137,7 @@ footer .fnote{margin-top:34px;font-size:12.5px;color:var(--ink-3)}
     <a class="btn" href="https://www.linkedin.com/in/barry-nguyen-989534161/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
   <div class="meta">
-    <div><b>5+</b> shipped data projects</div>
+    <div><b>6+</b> data projects, real data</div>
     <div><b>6.0/7</b> Data Science GPA</div>
     <div><b>485</b> visa · full work rights</div>
   </div>
@@ -139,63 +146,91 @@ footer .fnote{margin-top:34px;font-size:12.5px;color:var(--ink-3)}
 <section id="work"><div class="wrap">
   <div class="sec-eyebrow">Selected work</div>
   <h2 class="sec-title">Projects that led with the result</h2>
-  <p class="sec-lead">Each of these started from a real question and ended with a number. Live demos and code where available.</p>
+  <p class="note">Every chart below is from my own submitted coursework or research — not a mock-up.</p>
   <div class="grid">
 
     <article class="card">
-      <div class="kicker">BI Dashboard · HTML + Chart.js</div>
-      <h3>Home Sales — Performance Dashboard</h3>
-      <div class="result">A 33% cancellation rate — uniform across every segment — is the real revenue leak, not product mix.</div>
-      <p class="desc">Analysed 9,999 e-commerce orders ($2.86M completed vs $1.44M cancelled), cleaned the raw data, modeled a star schema, and built an interactive dashboard that answers the question first.</p>
-      <div class="tags"><span class="tag">Data cleaning</span><span class="tag">Star schema</span><span class="tag">Chart.js</span><span class="tag">Storytelling</span></div>
-      <div class="actions">
-        <a href="https://barrynguyen2003.github.io/home-sales-dashboard/" target="_blank" rel="noopener">▶ Live demo</a>
-        <a href="https://github.com/BarryNguyen2003/home-sales-dashboard" target="_blank" rel="noopener">◇ Code</a>
+      <div class="thumb"><span class="flag">Flagship</span><img src="assets/img/loan_decision_tree.png" alt="Loan approval decision tree"></div>
+      <div class="body">
+        <div class="kicker">Credit-risk ML · R</div>
+        <h3>Loan Approval Prediction</h3>
+        <div class="result">Credit score and employment status drive approval — existing debt doesn't. Proven with hypothesis testing, not hunches.</div>
+        <p class="desc">Built and compared Logistic Regression and Decision Tree models on applicant data, using hypothesis tests to isolate the factors that truly drive approve/reject. Median credit score ~570 (approved) vs ~370 (declined); the tree's first split is credit score &lt; 399.5.</p>
+        <div class="tags"><span class="tag">R</span><span class="tag">Logistic Regression</span><span class="tag">Decision Trees</span><span class="tag">Hypothesis Testing</span><span class="tag">ggplot2</span></div>
+        <div class="actions"><span class="muted">Academic project · Western Sydney University</span></div>
       </div>
     </article>
 
     <article class="card">
-      <div class="kicker">Machine Learning · Python</div>
-      <h3>Wine Quality — ML</h3>
-      <div class="result">Ridge regression cut RMSE to 0.72 (vs a 0.88 baseline); k-NN reached 84% on quality classification.</div>
-      <p class="desc">End-to-end scikit-learn pipeline on 5,320 wines covering regression, PCA classification, and K-Means clustering — with an honest write-up of class imbalance and what the clusters really mean.</p>
-      <div class="tags"><span class="tag">scikit-learn</span><span class="tag">PCA</span><span class="tag">Clustering</span><span class="tag">EDA</span></div>
-      <div class="actions">
-        <a href="https://github.com/BarryNguyen2003/wine-quality-ml" target="_blank" rel="noopener">◇ Code</a>
+      <div class="thumb stat"><span class="flag live">Live demo</span><span class="big">33%</span><span class="cap">cancellation rate = the revenue leak</span></div>
+      <div class="body">
+        <div class="kicker">BI Dashboard · HTML + Chart.js</div>
+        <h3>Home Sales — Performance Dashboard</h3>
+        <div class="result">Across 9,999 orders, a 33% cancellation rate — uniform across every segment — is the real leak, not product mix.</div>
+        <p class="desc">Cleaned the raw data ($2.86M completed vs $1.44M cancelled), modeled a star schema, and built an interactive dashboard that answers the business question first.</p>
+        <div class="tags"><span class="tag">Data cleaning</span><span class="tag">Star schema</span><span class="tag">Chart.js</span><span class="tag">Storytelling</span></div>
+        <div class="actions">
+          <a href="https://barrynguyen2003.github.io/home-sales-dashboard/" target="_blank" rel="noopener">▶ Live demo</a>
+          <a href="https://github.com/BarryNguyen2003/home-sales-dashboard" target="_blank" rel="noopener">◇ Code</a>
+        </div>
       </div>
     </article>
 
     <article class="card">
-      <div class="kicker">AI System · Python</div>
-      <h3>AI Analytics System</h3>
-      <div class="result">An agentic pipeline that cleans data, trains &amp; compares ML models, and writes the report — end to end.</div>
-      <p class="desc">A disk-driven system that runs forecasting and regression workflows (Prophet, LightGBM, XGBoost), selects the best model, and renders an HTML report — orchestration by design, math by deterministic scripts.</p>
-      <div class="tags"><span class="tag">scikit-learn</span><span class="tag">Prophet</span><span class="tag">LightGBM</span><span class="tag">XGBoost</span></div>
-      <div class="actions">
-        <a href="https://github.com/BarryNguyen2003/ai-analytics-system" target="_blank" rel="noopener">◇ Code</a>
+      <div class="thumb"><img src="assets/img/ride_fare_distance_scatter.png" alt="Fare vs trip distance regression"></div>
+      <div class="body">
+        <div class="kicker">Applied Statistics · R (group)</div>
+        <h3>Ride-Share Service Analytics</h3>
+        <div class="result">Chi-square, bootstrap CIs, ANOVA and regression on real Sydney ride data — the full playbook for why a metric moves.</div>
+        <p class="desc">Tested weather vs. passenger gender (chi-square), built an 85% CI for the driver-rating gender gap using bootstrapping and theory, ran ANOVA on fare by time of day, and regressed fare on trip distance with residual diagnostics.</p>
+        <div class="tags"><span class="tag">R</span><span class="tag">Hypothesis Testing</span><span class="tag">Bootstrapping</span><span class="tag">ANOVA</span><span class="tag">Regression</span></div>
+        <div class="actions"><span class="muted">Group project · Western Sydney University</span></div>
       </div>
     </article>
 
     <article class="card">
-      <div class="kicker">Data Viz · Tableau</div>
-      <h3>Global Health Inequality</h3>
-      <div class="result">Where the world's disease burden actually concentrates — and where it's just under-reported.</div>
-      <p class="desc">Interactive Tableau dashboards over WHO Health Inequality data (obesity, smoking, anaemia…) with tree maps, choropleths, trends and a correlation view — caveats stated plainly.</p>
-      <div class="tags"><span class="tag">Tableau</span><span class="tag">WHO data</span><span class="tag">Maps</span><span class="tag">Correlation</span></div>
-      <div class="actions">
-        <a href="https://github.com/BarryNguyen2003/global-health-dataviz" target="_blank" rel="noopener">◇ Code</a>
+      <div class="thumb"><img src="assets/img/viz_network_full.png" alt="Gephi network graph"></div>
+      <div class="body">
+        <div class="kicker">BI &amp; Viz · Power BI + Gephi</div>
+        <h3>Dashboarding &amp; Network Visualisation</h3>
+        <div class="result">Chose the right visual for the audience — network graphs vs. treemaps — with a written case for each.</div>
+        <p class="desc">Compared visualisation strategies for complex relational data: a character-relationship network in Gephi (node size = degree, colour = community) vs. treemap/dashboard reporting in Power BI on a structured sales dataset.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">Gephi</span><span class="tag">Dashboard Design</span></div>
+        <div class="actions"><span class="muted">Academic project · Western Sydney University</span></div>
       </div>
     </article>
 
     <article class="card">
-      <div class="kicker">Machine Learning · Python</div>
-      <h3>Real Estate Price Prediction — Mexico</h3>
-      <div class="result">85%+ prediction accuracy, served through an interactive real-time price estimator.</div>
-      <p class="desc">End-to-end ML pipeline built at WorldQuant University — EDA-driven feature selection, model development, and a live interface for property-price estimation.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">EDA</span><span class="tag">Modeling</span></div>
-      <div class="actions"><span class="muted">Code available on request</span></div>
+      <div class="thumb"><span class="flag">Applied research</span><img src="assets/img/plant_pointcloud_views.png" alt="3D plant point cloud"></div>
+      <div class="body">
+        <div class="kicker">Scientific Data · Python</div>
+        <h3>Plant Phenotyping — 3D &amp; NDVI</h3>
+        <div class="result">Derived NDVI from raw RGB + near-infrared independently — an exact, pixel-for-pixel match to the sensor's own firmware.</div>
+        <p class="desc">For the Australian Plant Phenomics Network: parsed Phenospex PlantEye 3D point clouds and multispectral scans, computed a vegetation-health index from scratch, and validated it against the sensor's firmware output.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Open3D</span><span class="tag">Multispectral</span><span class="tag">NDVI</span></div>
+        <div class="actions"><span class="muted">Applied research · APPN</span></div>
+      </div>
     </article>
 
+    <article class="card">
+      <div class="thumb"><img src="assets/img/hadoop_svm_normalized.png" alt="SVM confusion matrix on Hadoop"></div>
+      <div class="body">
+        <div class="kicker">Big Data · Hadoop / HDFS</div>
+        <h3>Distributed Data Pipeline</h3>
+        <div class="result">Feature normalisation lifted SVM from 65% to 70% — caught by reading the confusion matrix, not just accuracy.</div>
+        <p class="desc">End-to-end movie-review sentiment pipeline staged and processed on a Hadoop cluster via HDFS. Compared SVM, Logistic Regression and Random Forest, with and without normalisation, judging each on its confusion matrix.</p>
+        <div class="tags"><span class="tag">Hadoop</span><span class="tag">HDFS</span><span class="tag">Python</span><span class="tag">Model Comparison</span></div>
+        <div class="actions"><span class="muted">Academic project · Western Sydney University</span></div>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="sec-eyebrow" style="margin-top:40px">More on GitHub</p>
+  <div class="more">
+    <div class="morecard"><div class="mt">Wine Quality — ML</div><div class="md">Regression, PCA classification &amp; clustering in scikit-learn</div><a href="https://github.com/BarryNguyen2003/wine-quality-ml" target="_blank" rel="noopener">View code →</a></div>
+    <div class="morecard"><div class="mt">AI Analytics System</div><div class="md">Agentic pipeline: clean → model → report (Prophet, LightGBM, XGBoost)</div><a href="https://github.com/BarryNguyen2003/ai-analytics-system" target="_blank" rel="noopener">View code →</a></div>
+    <div class="morecard"><div class="mt">Global Health Inequality</div><div class="md">Tableau dashboards over WHO inequality data</div><a href="https://github.com/BarryNguyen2003/global-health-dataviz" target="_blank" rel="noopener">View code →</a></div>
   </div>
 </div></section>
 
@@ -204,16 +239,16 @@ footer .fnote{margin-top:34px;font-size:12.5px;color:var(--ink-3)}
     <div>
       <div class="sec-eyebrow">Toolkit</div>
       <h2 class="sec-title">Skills, grouped</h2>
-      <div class="skillgroup"><div class="lbl">Programming</div><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Git</span></div></div>
-      <div class="skillgroup"><div class="lbl">Machine learning</div><div class="chips"><span class="chip">scikit-learn</span><span class="chip">Regression</span><span class="chip">Classification</span><span class="chip">PCA</span><span class="chip">Clustering</span></div></div>
-      <div class="skillgroup"><div class="lbl">BI &amp; visualization</div><div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Chart.js dashboards</span><span class="chip">Excel</span></div></div>
-      <div class="skillgroup"><div class="lbl">Marketing</div><div class="chips"><span class="chip">Content &amp; social</span><span class="chip">Campaign management</span><span class="chip">Audience analytics</span><span class="chip">Canva</span></div></div>
+      <div class="skillgroup"><div class="lbl">Analytics &amp; modelling</div><div class="chips"><span class="chip">R</span><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Regression &amp; Classification</span><span class="chip">Clustering</span><span class="chip">Hypothesis Testing</span></div></div>
+      <div class="skillgroup"><div class="lbl">Visualisation &amp; reporting</div><div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Gephi</span><span class="chip">ggplot2</span><span class="chip">Matplotlib</span><span class="chip">Technical reporting</span></div></div>
+      <div class="skillgroup"><div class="lbl">Data engineering</div><div class="chips"><span class="chip">Hadoop</span><span class="chip">HDFS</span><span class="chip">ETL scripting</span><span class="chip">Point clouds / HDF5</span></div></div>
+      <div class="skillgroup"><div class="lbl">Business &amp; communication</div><div class="chips"><span class="chip">Marketing strategy</span><span class="chip">Audience research</span><span class="chip">Stakeholder communication</span><span class="chip">Group delivery</span></div></div>
     </div>
     <div id="about" class="about">
       <div class="sec-eyebrow">About</div>
       <h2 class="sec-title">Both sides of the table</h2>
-      <p>I studied data science and marketing at the same time, so I'm as comfortable with a model's residuals as I am with a campaign's engagement curve. My favourite work sits where the two meet — using data to make a decision someone actually acts on.</p>
-      <p>Off the clock I'm sharpening SQL and BI, and turning coursework and self-driven projects into things I can ship and explain.</p>
+      <p>My academic and project work spans two things a delivery or advisory team needs: solid technical execution — statistics, R, Python, SQL, dashboarding — and a marketing background that keeps me focused on what the analysis is actually <i>for</i>: the decision at the end of it.</p>
+      <p>I've worked across credit-risk classification, business dashboarding, applied statistics on real service data, distributed data processing and scientific sensor data — comfortable moving between hands-on modelling and presenting to a non-technical audience.</p>
       <div class="edu">
         <b>Western Sydney University</b> · 2021 – 2025<br>
         Bachelor of Applied Data Science — GPA 6.0/7<br>
