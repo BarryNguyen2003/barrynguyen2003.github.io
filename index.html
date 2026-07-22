@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barry Nguyen — Data & Marketing</title>
+<meta name="description" content="Barry Nguyen (Xuan Hoang Nguyen) — Applied Data Science + Business (Marketing) graduate. Data analyst, data scientist and marketing-analytics projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#9B2D28; --maroon-2:#B23A34; --maroon-ink:#7A231F;
+  --ink:#1A1A1A; --ink-2:#40454C; --ink-3:#6B7280;
+  --bg:#FBF9F7; --card:#FFFFFF; --line:#E7E3DE; --chip:#F2EEE9;
+  --maxw:1000px;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --ink:#ECECEC; --ink-2:#C3C7CC; --ink-3:#9AA0A8;
+    --bg:#141312; --card:#1C1B1A; --line:#2E2C2A; --chip:#26241F;
+    --maroon:#E07A6E; --maroon-2:#EC8B7F; --maroon-ink:#E07A6E; }
+}
+:root[data-theme="light"]{ --ink:#1A1A1A;--ink-2:#40454C;--ink-3:#6B7280;--bg:#FBF9F7;--card:#FFFFFF;--line:#E7E3DE;--chip:#F2EEE9;--maroon:#9B2D28;--maroon-2:#B23A34;--maroon-ink:#7A231F; }
+:root[data-theme="dark"]{ --ink:#ECECEC;--ink-2:#C3C7CC;--ink-3:#9AA0A8;--bg:#141312;--card:#1C1B1A;--line:#2E2C2A;--chip:#26241F;--maroon:#E07A6E;--maroon-2:#EC8B7F;--maroon-ink:#E07A6E; }
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .brand{font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:var(--maroon)}
+nav .links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:500}
+nav .links a{color:var(--ink-2)}nav .links a:hover{color:var(--maroon)}
+#themeBtn{background:none;border:1px solid var(--line);color:var(--ink-2);width:34px;height:34px;border-radius:9px;cursor:pointer;font-size:15px}
+@media(max-width:640px){nav .links a:not(.btn-mini){display:none}}
+
+/* hero */
+.hero{padding:76px 0 54px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--maroon)}
+.hero h1{font-size:clamp(38px,6.6vw,66px);color:var(--ink)}
+.hero h1 .sub{color:var(--maroon)}
+.hero .roles{font-size:clamp(16px,2.3vw,21px);color:var(--ink-2);font-weight:500;margin-top:16px}
+.hero .lead{font-size:clamp(15px,1.7vw,17.5px);color:var(--ink-2);max-width:660px;margin-top:22px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:11px;font-weight:600;font-size:14.5px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:.15s}
+.btn:hover{transform:translateY(-1px);border-color:var(--maroon)}
+.btn.primary{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.btn.primary:hover{background:var(--maroon-2)}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3)}
+.meta b{display:block;font-size:19px;font-weight:700;color:var(--ink);font-family:'Fraunces',serif}
+
+/* sections */
+section{padding:52px 0}
+.sec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);margin-bottom:10px}
+.sec-title{font-size:clamp(25px,3.4vw,34px);color:var(--ink);margin-bottom:8px}
+.sec-lead{color:var(--ink-2);max-width:640px;margin-bottom:34px}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px;display:flex;flex-direction:column;transition:.18s}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 40px -22px rgba(0,0,0,.35);border-color:color-mix(in srgb,var(--maroon) 40%,var(--line))}
+.card .kicker{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon)}
+.card h3{font-size:20px;margin:8px 0 0;color:var(--ink)}
+.card .result{font-size:15px;color:var(--ink);font-weight:600;margin:12px 0 6px;line-height:1.4}
+.card .desc{font-size:14px;color:var(--ink-2);flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 18px}
+.tag{font-size:12px;font-weight:500;color:var(--ink-2);background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+.card .actions{display:flex;gap:16px;font-size:13.5px;font-weight:600}
+.card .actions a{color:var(--maroon);display:inline-flex;align-items:center;gap:5px}
+.card .actions a:hover{text-decoration:underline}
+.card .actions .muted{color:var(--ink-3);font-weight:500}
+
+/* skills + about */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+@media(max-width:720px){.two{grid-template-columns:1fr;gap:30px}}
+.skillgroup{margin-bottom:18px}
+.skillgroup .lbl{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;color:var(--ink-2);background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:5px 12px}
+.about p{color:var(--ink-2);margin-bottom:14px}
+.about .edu{border-left:3px solid var(--maroon);padding-left:16px;margin-top:8px}
+.about .edu b{color:var(--ink)}
+.badge{display:inline-block;font-size:12.5px;font-weight:600;color:var(--maroon);background:color-mix(in srgb,var(--maroon) 12%,transparent);border-radius:999px;padding:4px 13px;margin-top:6px}
+
+/* resume */
+.resume-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.rcard{flex:1;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.rcard .t{font-weight:700;color:var(--ink);font-size:15.5px;margin-bottom:4px}
+.rcard .d{font-size:13px;color:var(--ink-3);margin-bottom:14px}
+.rcard a{font-size:13.5px;font-weight:600;color:var(--maroon)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:46px 0 60px;text-align:center}
+footer h2{font-size:clamp(24px,3.2vw,32px);color:var(--ink);margin-bottom:10px}
+footer p{color:var(--ink-2);margin-bottom:22px}
+footer .links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+footer .fnote{margin-top:34px;font-size:12.5px;color:var(--ink-3)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top">Barry Nguyen</a>
+  <div class="links">
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a class="btn-mini" href="#contact" style="color:var(--maroon);font-weight:600">Contact</a>
+    <button id="themeBtn" title="Toggle theme" aria-label="Toggle light/dark">◐</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">Data &amp; Marketing · Sydney</div>
+  <h1>Turning messy data<br>into <span class="sub">decisions.</span></h1>
+  <div class="roles">Data Analyst · Data Scientist · Marketing Analytics</div>
+  <p class="lead">Western Sydney University double-degree graduate in <b>Applied Data Science</b> (GPA 6.0/7) and <b>Business – Marketing</b>. I build machine-learning models, BI dashboards, and data-driven campaigns — and I connect the numbers back to the business question behind them.</p>
+  <div class="cta">
+    <a class="btn primary" href="#work">View my work →</a>
+    <a class="btn" href="#resume">Download résumé</a>
+    <a class="btn" href="https://github.com/BarryNguyen2003" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/barry-nguyen-989534161/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="meta">
+    <div><b>5+</b> shipped data projects</div>
+    <div><b>6.0/7</b> Data Science GPA</div>
+    <div><b>485</b> visa · full work rights</div>
+  </div>
+</div></header>
+
+<section id="work"><div class="wrap">
+  <div class="sec-eyebrow">Selected work</div>
+  <h2 class="sec-title">Projects that led with the result</h2>
+  <p class="sec-lead">Each of these started from a real question and ended with a number. Live demos and code where available.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="kicker">BI Dashboard · HTML + Chart.js</div>
+      <h3>Home Sales — Performance Dashboard</h3>
+      <div class="result">A 33% cancellation rate — uniform across every segment — is the real revenue leak, not product mix.</div>
+      <p class="desc">Analysed 9,999 e-commerce orders ($2.86M completed vs $1.44M cancelled), cleaned the raw data, modeled a star schema, and built an interactive dashboard that answers the question first.</p>
+      <div class="tags"><span class="tag">Data cleaning</span><span class="tag">Star schema</span><span class="tag">Chart.js</span><span class="tag">Storytelling</span></div>
+      <div class="actions">
+        <a href="https://barrynguyen2003.github.io/home-sales-dashboard/" target="_blank" rel="noopener">▶ Live demo</a>
+        <a href="https://github.com/BarryNguyen2003/home-sales-dashboard" target="_blank" rel="noopener">◇ Code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="kicker">Machine Learning · Python</div>
+      <h3>Wine Quality — ML</h3>
+      <div class="result">Ridge regression cut RMSE to 0.72 (vs a 0.88 baseline); k-NN reached 84% on quality classification.</div>
+      <p class="desc">End-to-end scikit-learn pipeline on 5,320 wines covering regression, PCA classification, and K-Means clustering — with an honest write-up of class imbalance and what the clusters really mean.</p>
+      <div class="tags"><span class="tag">scikit-learn</span><span class="tag">PCA</span><span class="tag">Clustering</span><span class="tag">EDA</span></div>
+      <div class="actions">
+        <a href="https://github.com/BarryNguyen2003/wine-quality-ml" target="_blank" rel="noopener">◇ Code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="kicker">AI System · Python</div>
+      <h3>AI Analytics System</h3>
+      <div class="result">An agentic pipeline that cleans data, trains &amp; compares ML models, and writes the report — end to end.</div>
+      <p class="desc">A disk-driven system that runs forecasting and regression workflows (Prophet, LightGBM, XGBoost), selects the best model, and renders an HTML report — orchestration by design, math by deterministic scripts.</p>
+      <div class="tags"><span class="tag">scikit-learn</span><span class="tag">Prophet</span><span class="tag">LightGBM</span><span class="tag">XGBoost</span></div>
+      <div class="actions">
+        <a href="https://github.com/BarryNguyen2003/ai-analytics-system" target="_blank" rel="noopener">◇ Code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="kicker">Data Viz · Tableau</div>
+      <h3>Global Health Inequality</h3>
+      <div class="result">Where the world's disease burden actually concentrates — and where it's just under-reported.</div>
+      <p class="desc">Interactive Tableau dashboards over WHO Health Inequality data (obesity, smoking, anaemia…) with tree maps, choropleths, trends and a correlation view — caveats stated plainly.</p>
+      <div class="tags"><span class="tag">Tableau</span><span class="tag">WHO data</span><span class="tag">Maps</span><span class="tag">Correlation</span></div>
+      <div class="actions">
+        <a href="https://github.com/BarryNguyen2003/global-health-dataviz" target="_blank" rel="noopener">◇ Code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="kicker">Machine Learning · Python</div>
+      <h3>Real Estate Price Prediction — Mexico</h3>
+      <div class="result">85%+ prediction accuracy, served through an interactive real-time price estimator.</div>
+      <p class="desc">End-to-end ML pipeline built at WorldQuant University — EDA-driven feature selection, model development, and a live interface for property-price estimation.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">EDA</span><span class="tag">Modeling</span></div>
+      <div class="actions"><span class="muted">Code available on request</span></div>
+    </article>
+
+  </div>
+</div></section>
+
+<section id="skills" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <div class="two">
+    <div>
+      <div class="sec-eyebrow">Toolkit</div>
+      <h2 class="sec-title">Skills, grouped</h2>
+      <div class="skillgroup"><div class="lbl">Programming</div><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Git</span></div></div>
+      <div class="skillgroup"><div class="lbl">Machine learning</div><div class="chips"><span class="chip">scikit-learn</span><span class="chip">Regression</span><span class="chip">Classification</span><span class="chip">PCA</span><span class="chip">Clustering</span></div></div>
+      <div class="skillgroup"><div class="lbl">BI &amp; visualization</div><div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Chart.js dashboards</span><span class="chip">Excel</span></div></div>
+      <div class="skillgroup"><div class="lbl">Marketing</div><div class="chips"><span class="chip">Content &amp; social</span><span class="chip">Campaign management</span><span class="chip">Audience analytics</span><span class="chip">Canva</span></div></div>
+    </div>
+    <div id="about" class="about">
+      <div class="sec-eyebrow">About</div>
+      <h2 class="sec-title">Both sides of the table</h2>
+      <p>I studied data science and marketing at the same time, so I'm as comfortable with a model's residuals as I am with a campaign's engagement curve. My favourite work sits where the two meet — using data to make a decision someone actually acts on.</p>
+      <p>Off the clock I'm sharpening SQL and BI, and turning coursework and self-driven projects into things I can ship and explain.</p>
+      <div class="edu">
+        <b>Western Sydney University</b> · 2021 – 2025<br>
+        Bachelor of Applied Data Science — GPA 6.0/7<br>
+        Bachelor of Business (Marketing) — GPA 5.1/7
+      </div>
+      <div class="badge">🇦🇺 Temporary Graduate visa (subclass 485) — full work rights from Mar 2026</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="resume"><div class="wrap">
+  <div class="sec-eyebrow">Résumé</div>
+  <h2 class="sec-title">Three versions, one story</h2>
+  <p class="sec-lead">Same facts, tailored to the role. One page each, ATS-friendly.</p>
+  <div class="resume-row">
+    <div class="rcard"><div class="t">Data Analyst</div><div class="d">SQL · BI · business insight</div><a href="resumes/resume_data_analyst.pdf" target="_blank" rel="noopener">Download PDF ↓</a></div>
+    <div class="rcard"><div class="t">Data Scientist</div><div class="d">Python · ML pipelines</div><a href="resumes/resume_data_scientist.pdf" target="_blank" rel="noopener">Download PDF ↓</a></div>
+    <div class="rcard"><div class="t">Marketing Analytics</div><div class="d">Growth · data-driven marketing</div><a href="resumes/resume_data_marketing.pdf" target="_blank" rel="noopener">Download PDF ↓</a></div>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let's talk data.</h2>
+  <p>Open to junior data analyst, data science &amp; marketing-analytics roles in Sydney.</p>
+  <div class="links">
+    <a class="btn primary" href="mailto:Barrynguyen.work@gmail.com">✉ Barrynguyen.work@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/barry-nguyen-989534161/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/BarryNguyen2003" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="fnote">Built by Barry Nguyen (Xuan Hoang Nguyen) · hand-coded, hosted on GitHub Pages.</div>
+</div></footer>
+
+<script>
+(function(){
+  var b=document.getElementById('themeBtn');
+  var saved=localStorage.getItem('theme');
+  if(saved){document.documentElement.setAttribute('data-theme',saved);}
+  b.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    if(!cur){cur=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',next);
+    localStorage.setItem('theme',next);
+  });
+})();
+</script>
+</body>
+</html>
